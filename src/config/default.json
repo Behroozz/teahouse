@@ -1,0 +1,19 @@
+{
+  "url": {
+    "imdb": {
+      "latest_genres": "https://imdb8.p.rapidapi.com/title/get-genres"
+    }
+  },
+  "rapidapi": {
+    "host": "imdb8.p.rapidapi.com",
+    "key": "fec5dcc2a5msh4214def2b1c4036p13bd67jsn596e897b5972"
+  },
+  "jwtPrivateKey": "vidly_jwtPrivateKey",
+  "mongodb": {
+    "local_url": "mongodb://localhost/teespring",
+    "docker_url": "mongodb://mongo:27017/teespring-app"
+  },
+  "redis": {
+    "expire": "10"
+  }
+}

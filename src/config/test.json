@@ -1,0 +1,19 @@
+{
+  "url": {
+    "imdb": {
+      "latest_genres": "genre1"
+    }
+  },
+  "rapidapi": {
+    "host": "www.host.com",
+    "key": "123"
+  },
+  "jwtPrivateKey": "123",
+  "mongodb": {
+    "local_url": "mongodb://localhost/movieRental",
+    "docker_url": "mongodb://mongo:27017/teespring-app"
+  },
+  "redis": {
+    "expire": 5
+  }
+}

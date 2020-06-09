@@ -1,0 +1,39 @@
+version: '3'
+services:
+  ui:
+    build: ./src/ui
+    volumes:
+      - ./src/ui:/ui
+      - /ui/node_modules
+    ports:
+      - 3000:3000
+    container_name: treewinter_ui
+    depends_on:
+      - api
+  api:
+    build: ./src/api
+    volumes:
+      - ./src/api:/api
+      - /api/node_modules
+    ports:
+      - 8000:8000
+    container_name: treewinter_api
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - REDIS_URL=redis://cache
+      - NODE_ENV=production
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+      - ./logs:/log/logs
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
