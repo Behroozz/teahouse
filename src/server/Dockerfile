@@ -2,7 +2,7 @@ FROM node:11-alpine
 
 LABEL author="Behrooz Tabesh"
 
-WORKDIR /api
+WORKDIR /server
 
 COPY package.json ./
 COPY package-lock.json ./

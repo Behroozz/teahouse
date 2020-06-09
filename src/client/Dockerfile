@@ -1,6 +1,6 @@
 FROM node:11-alpine
 
-WORKDIR /ui
+WORKDIR /client
 
 COPY package.json ./
 

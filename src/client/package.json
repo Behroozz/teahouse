@@ -1,8 +1,8 @@
 {
-  "name": "ui",
+  "name": "teahouse_client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://treewinter_api:8000",
+  "proxy": "http://teahouse_server:8000",
   "dependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",

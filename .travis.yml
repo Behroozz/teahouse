@@ -1,5 +1,5 @@
 before_script:
-  - cd src/ui
+  - cd src/client
   - npm install
 language: node_js
 node_js:

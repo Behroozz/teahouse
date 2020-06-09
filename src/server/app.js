@@ -34,15 +34,15 @@ console.log('env', env)
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-require('../api/startup/db')()
+require('../server/startup/db')()
 if(env === 'production') {
-  require('../api/startup/redis')
+  require('../server/startup/redis')
 }
-require('../api/startup/logging')()
+require('../server/startup/logging')()
 // require('./server/startup/template')(app)
-require('../api/startup/routes')(app)
-require('../api/startup/config')()
-require('../api/startup/validation')()
+require('../server/startup/routes')(app)
+require('../server/startup/config')()
+require('../server/startup/validation')()
 
 // TODO improve winston with creating logger interface
 // https://github.com/winstonjs/winston/blob/master/examples/quick-start.js

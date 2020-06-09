@@ -1,23 +1,23 @@
 version: '3'
 services:
-  ui:
-    build: ./src/ui
+  client:
+    build: ./src/client
     volumes:
-      - ./src/ui:/ui
-      - /ui/node_modules
+      - ./src/client:/client
+      - /client/node_modules
     ports:
       - 3000:3000
-    container_name: treewinter_ui
+    container_name: teahouse_client
     depends_on:
-      - api
-  api:
-    build: ./src/api
+      - server
+  server:
+    build: ./src/server
     volumes:
-      - ./src/api:/api
-      - /api/node_modules
+      - ./src/server:/server
+      - /server/node_modules
     ports:
       - 8000:8000
-    container_name: treewinter_api
+    container_name: teahouse_server
     depends_on:
       - mongo
       - redis
