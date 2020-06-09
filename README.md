@@ -2,11 +2,11 @@
 
 A simple single page application using the power of:
 
-![Express]
-![React]
-![MongoDB]
-![Mongoose]
-![Docker]
+* Express
+* React
+* MongoDB
+* Mongoose
+* Docker
 
 ## Running
 
