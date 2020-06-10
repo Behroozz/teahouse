@@ -10,8 +10,8 @@
   },
   "jwtPrivateKey": "123",
   "mongodb": {
-    "local_url": "mongodb://localhost/movieRental",
-    "docker_url": "mongodb://mongo:27017/teespring-app"
+    "local_url": "mongodb://localhost/teahouse",
+    "docker_url": "mongodb://mongo:27017/teahouse-app"
   },
   "redis": {
     "expire": 5

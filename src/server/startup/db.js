@@ -3,9 +3,9 @@ const mongoose = require('mongoose')
 const logger = require('../utilities/logger')
 
 const env = process.env.NODE_ENV || 'development'
-let mongodb_url = "mongodb://localhost/teespring"//config.get('mongodb.local_url')
+let mongodb_url = config.get('mongodb.local_url')
 if(env === 'production') {
-  mongodb_url = "mongodb://mongo:27017/teespring-app"// config.get('mongodb.docker_url')
+  mongodb_url = config.get('mongodb.docker_url')
 }
 
 module.exports = function() {

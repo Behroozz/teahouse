@@ -10,8 +10,8 @@
   },
   "jwtPrivateKey": "vidly_jwtPrivateKey",
   "mongodb": {
-    "local_url": "mongodb://localhost/teespring",
-    "docker_url": "mongodb://mongo:27017/teespring-app"
+    "local_url": "mongodb://localhost/teahouse",
+    "docker_url": "mongodb://mongo:27017/teahouse-app"
   },
   "redis": {
     "expire": "10"

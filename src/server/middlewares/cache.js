@@ -5,7 +5,7 @@ const logger = require('../utilities/logger')
 
 // TODO https://epsagon.com/blog/development/using-redis-to-optimize-mongodb-queries/
 const cache = (req, res, next) => {
-  let key = "movie-rental" + req.originalUrl || req.url;
+  let key = "teahouse" + req.originalUrl || req.url;
   if(_.get(req, 'method') === 'GET') {
     redis.get(key, (err, response) => {
       if(response) {

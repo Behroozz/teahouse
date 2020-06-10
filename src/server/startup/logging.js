@@ -18,7 +18,7 @@ module.exports = function() {
 
   new winston.transports.Console({ colorize: true, prettyPrint: true }),
   winston.add(new winston.transports.File({ filename: '../logs/logfile.log' }))
-  // winston.add(new winston.transports.MongoDB({ db: 'mongodb://mongo:27017/teespring-app', level: 'error'}))
+  // winston.add(new winston.transports.MongoDB({ db: 'mongodb://mongo:27017/teahouse-app', level: 'error'}))
 }
 
 

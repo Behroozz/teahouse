@@ -11,7 +11,7 @@ const logger = createLogger({
     format.splat(),
     format.json()
   ),
-  defaultMeta: { service: 'movie-rental' },
+  defaultMeta: { service: 'teahouse' },
   transports: [
     new winston.transports.Console({ colorize: true, prettyPrint: true }),
   ]

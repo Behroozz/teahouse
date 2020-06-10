@@ -72,23 +72,23 @@ router.put('/:id', async (req, res) => {
 //   console.log(request3);
 // }
 // https://kapeli.com/cheat_sheets/Axios.docset/Contents/Resources/Documents/index
-router.get('/imdb/latest', async(req, res) => {
-  try {
-    const response = await axios.get(config.get('url.imdb.latest_genres'), {
-      "headers":{
-      "content-type":"application/json",
-      "x-rapidapi-host": config.get('rapidapi.host'),
-      "x-rapidapi-key": config.get('rapidapi.key'),
-      "useQueryString":true
-      },
-      "params":{
-        "tconst":"tt0944947"
-      }
-    })
-    res.send(_.get(response, 'data'))
-  } catch(ex) {
-    console.log('ex', ex)
-  }
-})
+// router.get('/imdb/latest', async(req, res) => {
+//   try {
+//     const response = await axios.get(config.get('url.imdb.latest_genres'), {
+//       "headers":{
+//       "content-type":"application/json",
+//       "x-rapidapi-host": config.get('rapidapi.host'),
+//       "x-rapidapi-key": config.get('rapidapi.key'),
+//       "useQueryString":true
+//       },
+//       "params":{
+//         "tconst":"tt0944947"
+//       }
+//     })
+//     res.send(_.get(response, 'data'))
+//   } catch(ex) {
+//     console.log('ex', ex)
+//   }
+// })
 
 module.exports = router

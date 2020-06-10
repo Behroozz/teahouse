@@ -34,7 +34,7 @@ class App extends Component {
     }
 
     render() {
-        return(<h1>Treewinter</h1>)
+        return(<h1>Teahouse</h1>)
         // function PrivateRoute({component: Component, ...rest}) {
         //     return (
         //         <Route
