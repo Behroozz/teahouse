@@ -1,6 +1,6 @@
 # Teahouse
 
-A simple single page application using the power of:
+A simple single page application using:
 
 * Express
 * React
@@ -10,18 +10,18 @@ A simple single page application using the power of:
 
 ## Running
 
-#Docker
+## Docker
 Install [Docker](https://www.docker.com/get-started) on your machine and run the following command from the root directory of this project.
 
 `docker-compose up`
 
-#Local
-change client package.json "proxy" to "http://localhost:8000",
+##Local
+Change client package.json proxy to http://localhost:8000.
 
-On Terminal one navigate to client folder and run
+On Terminal one navigate to client folder and run:
 `npm run start`
 
-On Terminal two navigate to server folder and run
+On Terminal two navigate to server folder and run:
 `npm run start`
 
 Navigate to:
