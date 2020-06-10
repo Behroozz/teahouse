@@ -15,7 +15,7 @@ Install [Docker](https://www.docker.com/get-started) on your machine and run the
 
 `docker-compose up`
 
-##Local
+## Local
 Change client package.json proxy to http://localhost:8000.
 
 On Terminal one navigate to client folder and run:
