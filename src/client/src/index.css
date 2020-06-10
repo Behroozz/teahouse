@@ -1,30 +1,73 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  font-size: 18px;
   height: 100%;
   min-height: 100%;
 }
-
-.content {
-}
-
 html {
   height: 100%;
 }
-
-.link-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  color:  #0000EE;
-}
-
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color:rgba(50,50,50,0.5);;
+}
+.header {
+  padding: 0.4em 0.7em;
+}
+.productContainer {
+  margin: 1em;
+}
+.productCell {
+  margin-bottom: 1em;
+}
+.productCard {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  font-family: arial;
+  min-height: 37em;
+}
+.productInfo {
+  padding: 1em;
+  text-transform: capitalize;
+}
+.productImage {
+  height: 200px;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5em;
+}
+.productPrice {
+  color: red;
+}
+.productTitle {
+  text-align: center;
+}
+.productDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+.productCard button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  position: absolute; 
+  bottom: 0;
+}
+.productCard button:hover {
+  opacity: 0.7;
 }
