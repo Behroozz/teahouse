@@ -26,6 +26,7 @@ router.post('/populate', async (req, res) => {
 // req.query.completed
 // price: { $gt: 17, $lt: 66 },
 // category: { $in: ['hardcover', 'art'] }
+// select('name price').
 // GET /task?limit=10&skip=20
 // GET /task?sort=createdAt_asc // desc
 router.get('/', cache, async (req, res) => {
