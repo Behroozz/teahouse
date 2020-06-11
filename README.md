@@ -7,6 +7,7 @@ A simple single page application using:
 * MongoDB
 * Mongoose
 * Docker
+* Redis
 
 ## Running
 
