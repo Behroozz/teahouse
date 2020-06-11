@@ -4,7 +4,6 @@ const path = require('path')
 const app = express()
 
 const env = process.env.NODE_ENV || 'development'
-console.log('Behrooz env', env)
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 

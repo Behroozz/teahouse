@@ -1,3 +1,6 @@
+import { asyncActionCreator, actions } from './Actions'
+const { FETCH_PRODUCTS } = actions
+
 const initialState = {
   loading: false,
   loaded: false,
@@ -7,13 +10,13 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_PRODUCTS_SUCCESS':
+    case asyncActionCreator(FETCH_PRODUCTS).SUCCESS:
       return {
         ...state,
         loaded: true,
         products: action.payload,
       }
-    case 'FETCH_PRODUCTS_FAILURE':
+    case asyncActionCreator(FETCH_PRODUCTS).FAILURE:
       return {
         ...state,
         error: action.error

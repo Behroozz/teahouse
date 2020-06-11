@@ -36,7 +36,6 @@ router.get('/', cache, async (req, res) => {
     const parts = req.query.sortBy.split('_')
     sort[parts[0]] = parts[1] === 'desc' ? -1 : 1
   }
-
   try {
     const products = await Product
       .find({ })
