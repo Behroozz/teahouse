@@ -1,11 +1,13 @@
 import React, { useEffect, useReducer } from 'react'
-import ProductReducer from '../reducers/ProductReducer'
-import { fetchProducts } from '../api/ProductApi'
 import { get } from 'lodash'
+import { reducer as ProductReducer, initialState } from '../reducers/ProductReducer'
+import { fetchProducts } from '../api/ProductApi'
 import ProductTile from '../components/ProductTile'
+import CategoryAvgPrice from '../components/CategoryAvgPrice'
 
 const ProductListing = () => {
-  const [state, dispatch] = useReducer(ProductReducer)
+  const reducer = useReducer(ProductReducer, initialState)
+  const [state, dispatch] = reducer
 
   useEffect(() => {
     fetchProducts(dispatch)
@@ -13,6 +15,7 @@ const ProductListing = () => {
 
   return (
     <div>
+      <CategoryAvgPrice reducer={reducer}/>
       <div className="productContainer row">
         {get(state, 'loaded') &&
           state.products.map((product, index) =>
