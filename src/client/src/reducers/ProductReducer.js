@@ -5,17 +5,17 @@ const initialState = {
   error: ''
 }
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'FETCH_PRODUCTS_SUCCESS':
       return {
-        ...initialState,
+        ...state,
         loaded: true,
         products: action.payload,
       }
     case 'FETCH_PRODUCTS_FAILURE':
       return {
-        ...initialState,
+        ...state,
         error: action.error
       }
     default:

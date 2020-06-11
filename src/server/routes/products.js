@@ -21,9 +21,44 @@ router.post('/populate', async (req, res) => {
   }
 })
 
+
+// GET /task?completed=false
+// req.query.completed
+// price: { $gt: 17, $lt: 66 },
+// category: { $in: ['hardcover', 'art'] }
+// GET /task?limit=10&skip=20
+// GET /task?sort=createdAt_asc // desc
 router.get('/', cache, async (req, res) => {
-  const products = await Product.find().sort('category')
-  res.send(products)
+  const sort = {}
+
+  if(req.query.sortBy) {
+    const parts = req.query.sortBy.split('_')
+    sort[parts[0]] = parts[1] === 'desc' ? -1 : 1
+  }
+
+  try {
+    const products = await Product
+      .find({ })
+      .limit(parseInt(req.query.limit))
+      .skip(parseInt(req.query.skip))
+      .sort(sort)
+    res.send(products)
+  } catch(ex) { 
+    console.log('ex', ex)
+  }
+})
+
+router.get('/:id', cache, async (req, res) => {
+  const id = req.params.id
+  try {
+    const product = await Product.findOne({ id: id })
+    if(!product) {
+      return res.status(404).send()
+    }
+    res.send(product)
+  } catch(ex) {
+    res.status(500).send('The product with given ID was not found.')
+  }
 })
 
 router.post('/', cache, async (req, res) => {
@@ -43,7 +78,7 @@ router.post('/', cache, async (req, res) => {
   })
 
   await product.save()
-  res.send(product)
+  res.status(201).send(product)
 })
 
 module.exports =  router
