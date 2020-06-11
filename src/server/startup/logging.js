@@ -21,11 +21,6 @@ module.exports = function() {
   // winston.add(new winston.transports.MongoDB({ db: 'mongodb://mongo:27017/teahouse-app', level: 'error'}))
 }
 
-
-
-
-
-
 // Notes:
 // UncaughtException vs unhandledRejection
 // Uncaught Exception is when you throw an error and did not catch anywhere.

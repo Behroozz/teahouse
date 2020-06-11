@@ -39,7 +39,7 @@ const CategoryAvgPrice = ({reducer}) => {
       <div>
         <p>{'category:'}</p>
         <p>{'count:'}</p>
-        <p>{'price:'}</p>
+        <p>{'avg price:'}</p>
       </div>
       {map(avgCategoryPrice, avg => 
         <div>
