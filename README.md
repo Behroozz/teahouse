@@ -1,4 +1,4 @@
-# Teahouse
+# Teahouse (MERN, [MongoDB, Express, React, Node])
 
 A simple single page application using:
 
